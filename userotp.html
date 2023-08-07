@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userotp</title>
+    <style>
+        button{
+            padding: 10px 25px;
+            background-color: darkcyan;
+            font-size: 20px;
+            border-radius: 3px;
+            color: aliceblue;
+            text-transform: uppercase;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="otp">This is Your Otp</h1>
+    <button type="button" onclick="getotp()">otp</button>
+    
+    <!-- otp security js -->
+    <script src="otp-security.js"></script>
+
+    <script>
+        let val = JSON.parse(localStorage.getItem('OTP'));
+        document.getElementById('otp').innerHTML = "OTP : " + val.otp;
+        alert("OTP is come");
+        function getotp(){
+            window.location.href = "OTP.html";
+        }
+     </script>
+</body>
+</html>
